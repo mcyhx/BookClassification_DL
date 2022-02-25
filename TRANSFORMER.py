@@ -1,4 +1,4 @@
-
+#
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -70,9 +70,9 @@ class Scaled_Dot_Product_Attention(nn.Module):
             Q: [batch_size, len_Q, dim_Q]
             K: [batch_size, len_K, dim_K]
             V: [batch_size, len_V, dim_V]
-            scale: 缩放因子 论文为根号dim_K
+            scale:  scale factor
         Return:
-            self-attention后的张量，以及attention张量
+            self-attention tensor ,attention tensor
         '''
         attention = torch.matmul(Q, K.permute(0, 2, 1))
         if scale:
