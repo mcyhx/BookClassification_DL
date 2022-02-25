@@ -7,7 +7,7 @@ import time
 from tqdm import tqdm
 from __init__ import *
 from src.utils.tools import get_time_dif
-from transformers import AdamW, get_linear_schedule_with_warmup
+from transformers import AdamW
 
 
 # initialization
